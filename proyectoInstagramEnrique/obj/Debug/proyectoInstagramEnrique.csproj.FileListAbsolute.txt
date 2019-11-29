@@ -1,0 +1,14 @@
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\bin\Debug\proyectoFinal.exe.config
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\bin\Debug\proyectoFinal.exe
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\bin\Debug\proyectoFinal.pdb
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoInstagramEnrique.csprojAssemblyReference.cache
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Properties.Resources.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoInstagramEnrique.csproj.GenerateResource.cache
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoInstagramEnrique.csproj.CoreCompileInputs.cache
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.exe
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.pdb
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.Login.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.Register.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.start.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoInstagramEnrique.Form1.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.TestForm.resources
