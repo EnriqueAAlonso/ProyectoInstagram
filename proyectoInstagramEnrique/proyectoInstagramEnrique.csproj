@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Adapter.cs" />
     <Compile Include="Classes\Publication.cs" />
     <Compile Include="Classes\SQLClient.cs" />
     <Compile Include="Classes\User.cs" />
@@ -56,6 +57,12 @@
     </Compile>
     <Compile Include="Controls\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MakePublication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MakePublication.Designer.cs">
+      <DependentUpon>MakePublication.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\Register.cs">
       <SubType>UserControl</SubType>
@@ -75,6 +82,12 @@
     <Compile Include="Controls\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ViewPublication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ViewPublication.Designer.cs">
+      <DependentUpon>ViewPublication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +99,9 @@
     <EmbeddedResource Include="Controls\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MakePublication.resx">
+      <DependentUpon>MakePublication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ViewPublication.resx">
+      <DependentUpon>ViewPublication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
