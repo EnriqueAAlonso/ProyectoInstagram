@@ -20,6 +20,7 @@ namespace proyectoFinal.Controls
         public TestForm()
         {
             InitializeComponent();
+            makePublication1.Hide();
         }
 
         public void setOwner(Form1 o)
@@ -36,8 +37,8 @@ namespace proyectoFinal.Controls
         public void update(User u)
         {
             currentUser = u;
-            u.updatePublications();
-            makePublication1.update(currentUser);
+            u.updatePublications(us);
+            makePublication1.update(currentUser,us);
             currentUser.following =new List<string>();
             var following=us.getFollowing(currentUser);
             foreach (var person in following)

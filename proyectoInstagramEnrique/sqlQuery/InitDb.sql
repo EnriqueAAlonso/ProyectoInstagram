@@ -144,3 +144,16 @@ as
 select * from publications where @profile=profile order by date desc
 
 go
+alter table users
+add pPath nvarchar(MAX) 
+
+go
+create procedure updatePicture
+(
+	
+	@profile nvarchar(MAX),
+	@pPath nvarchar(MAX)
+)
+as
+
+UPDATE users set pPath=@pPath where username=@profile
