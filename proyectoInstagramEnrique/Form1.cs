@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using proyectoFinal.Classes;
+using proyectoFinal.Controls;
+
 namespace proyectoInstagramEnrique
 {
     public partial class Form1 : Form
@@ -29,6 +31,7 @@ namespace proyectoInstagramEnrique
             start1.Hide();
             testForm1.Show();
             testForm1.update(currentUser);
+            
         }
     }
 }

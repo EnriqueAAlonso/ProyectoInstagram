@@ -30,7 +30,6 @@
         {
             this.start1 = new proyectoFinal.Controls.start();
             this.testForm1 = new proyectoFinal.Controls.TestForm();
-            this.makePublication1 = new proyectoFinal.Controls.MakePublication();
             this.SuspendLayout();
             // 
             // start1
@@ -47,19 +46,11 @@
             this.testForm1.Size = new System.Drawing.Size(963, 550);
             this.testForm1.TabIndex = 1;
             // 
-            // makePublication1
-            // 
-            this.makePublication1.Location = new System.Drawing.Point(19, 8);
-            this.makePublication1.Name = "makePublication1";
-            this.makePublication1.Size = new System.Drawing.Size(983, 538);
-            this.makePublication1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 559);
-            this.Controls.Add(this.makePublication1);
             this.Controls.Add(this.testForm1);
             this.Controls.Add(this.start1);
             this.Name = "Form1";
@@ -72,7 +63,6 @@
 
         private proyectoFinal.Controls.start start1;
         private proyectoFinal.Controls.TestForm testForm1;
-        private proyectoFinal.Controls.MakePublication makePublication1;
     }
 }
 

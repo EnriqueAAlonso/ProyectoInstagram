@@ -13,3 +13,4 @@ C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoInstagramEnrique.Form1.resources
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.TestForm.resources
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.MakePublication.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.ViewPublication.resources

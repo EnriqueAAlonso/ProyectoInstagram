@@ -36,6 +36,8 @@ namespace proyectoFinal.Controls
         public void update(User u)
         {
             currentUser = u;
+            u.updatePublications();
+            makePublication1.update(currentUser);
             currentUser.following =new List<string>();
             var following=us.getFollowing(currentUser);
             foreach (var person in following)

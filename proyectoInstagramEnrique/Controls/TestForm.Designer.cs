@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.makePublication1 = new proyectoFinal.Controls.MakePublication();
             this.SuspendLayout();
             // 
             // button1
@@ -107,10 +108,18 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Username";
             // 
+            // makePublication1
+            // 
+            this.makePublication1.Location = new System.Drawing.Point(24, 19);
+            this.makePublication1.Name = "makePublication1";
+            this.makePublication1.Size = new System.Drawing.Size(570, 566);
+            this.makePublication1.TabIndex = 7;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.makePublication1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -134,5 +143,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
+        private MakePublication makePublication1;
     }
 }

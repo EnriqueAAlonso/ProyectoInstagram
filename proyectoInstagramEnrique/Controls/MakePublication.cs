@@ -8,16 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using proyectoFinal.Classes;
 namespace proyectoFinal.Controls
 {
     public partial class MakePublication : UserControl
     {
+        private User user;
         public MakePublication()
         {
             InitializeComponent();
             openFileDialog1.Filter = "JPG (.jpg)|*.jpg|BMP (.bmp)|*.bmp|GIF (.gif)|*.gif|PNG (.png)|*.png";
         }
 
+        public void update(User us)
+        {
+            textBox1.Text = "";
+            pictureBox1.Image = null;
+            user = us;
+            
+        }
+
+        private Image img;
+        private string desc;
         private void button1_Click(object sender, EventArgs e)
         {
             int size = -1;
@@ -27,13 +39,20 @@ namespace proyectoFinal.Controls
                 string file = openFileDialog1.FileName;
                 try
                 {
-                    string text = File.ReadAllText(file);
-                    size = text.Length;
+                    img= Image.FromFile(file);
+                    pictureBox1.Image = img;
                 }
                 catch (IOException)
                 {
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            desc = textBox1.Text;
+            Publication pub=new Publication();
+            pub.createPublication(desc,img,user);
         }
     }
 }
