@@ -18,7 +18,7 @@ namespace proyectoFinal.Controls
         public MakePublication()
         {
             InitializeComponent();
-            openFileDialog1.Filter = "JPG (.jpg)|*.jpg|BMP (.bmp)|*.bmp|GIF (.gif)|*.gif|PNG (.png)|*.png";
+            openFileDialog1.Filter = "JPG (.jpg)|*.jpg|BMP (.bmp)|*.bmp|PNG (.png)|*.png";
         }
 
         public void update(User us, UserService userS)

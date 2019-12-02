@@ -157,3 +157,16 @@ create procedure updatePicture
 as
 
 UPDATE users set pPath=@pPath where username=@profile
+go
+alter table users
+add descript nvarchar(MAX) 
+go
+create procedure updateDesc
+(
+	
+	@profile nvarchar(MAX),
+	@desc nvarchar(MAX)
+)
+as
+
+UPDATE users set descript=@desc where username=@profile

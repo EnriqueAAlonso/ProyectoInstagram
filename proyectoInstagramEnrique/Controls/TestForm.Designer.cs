@@ -36,6 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.makePublication1 = new proyectoFinal.Controls.MakePublication();
+            this.updateProfile1 = new proyectoFinal.Controls.UpdateProfile();
             this.SuspendLayout();
             // 
             // button1
@@ -115,10 +116,19 @@
             this.makePublication1.Size = new System.Drawing.Size(570, 566);
             this.makePublication1.TabIndex = 7;
             // 
+            // updateProfile1
+            // 
+            this.updateProfile1.Location = new System.Drawing.Point(14, 19);
+            this.updateProfile1.Name = "updateProfile1";
+            this.updateProfile1.Size = new System.Drawing.Size(579, 550);
+            this.updateProfile1.TabIndex = 8;
+            this.updateProfile1.Load += new System.EventHandler(this.updateProfile1_Load);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.updateProfile1);
             this.Controls.Add(this.makePublication1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -144,5 +154,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private MakePublication makePublication1;
+        private UpdateProfile updateProfile1;
     }
 }

@@ -36,6 +36,7 @@ namespace proyectoFinal.Controls
 
         public void update(User u)
         {
+            
             currentUser = u;
             u.updatePublications(us);
             makePublication1.update(currentUser,us);
@@ -57,8 +58,9 @@ namespace proyectoFinal.Controls
             {
                 textBox1.AppendText(f+Environment.NewLine);
             }
-            
-            
+            updateProfile1.update(currentUser, us);
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -89,6 +91,11 @@ namespace proyectoFinal.Controls
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateProfile1_Load(object sender, EventArgs e)
         {
 
         }
