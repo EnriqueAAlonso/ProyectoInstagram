@@ -104,3 +104,43 @@ dPublication DateTime Not Null,
 descript nvarchar(MAX)
 )
 go
+create TABLE Publications
+(
+	ID nvarchar(MAX),
+	profile nvarchar(MAX),
+	imgPath nvarchar(MAX),
+	date datetime,
+	description nvarchar(MAX)
+)
+go
+create procedure createPublication
+(
+	@ID nvarchar(MAX),
+	@profile nvarchar(MAX),
+	@date datetime,
+	@imgPath nvarchar(MAX),
+	@description nvarchar(MAX),
+	@haserror bit out
+)
+as
+begin try
+	set @haserror = 0;
+	insert into Publications
+	values
+	(@ID,@profile,@imgPath,@date,@description)
+end try
+begin catch
+	set @haserror = 1;
+end catch
+go
+create procedure getPublication
+(
+	
+	@profile nvarchar(MAX),
+	@haserror bit out
+)
+as
+
+select * from publications where @profile=profile order by date desc
+
+go
