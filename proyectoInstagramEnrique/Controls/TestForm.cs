@@ -39,7 +39,7 @@ namespace proyectoFinal.Controls
             
             currentUser = u;
             u.updatePublications(us);
-            makePublication1.update(currentUser,us);
+            
             currentUser.following =new List<string>();
             var following=us.getFollowing(currentUser);
             foreach (var person in following)
@@ -58,6 +58,7 @@ namespace proyectoFinal.Controls
             {
                 textBox1.AppendText(f+Environment.NewLine);
             }
+            makePublication1.update(currentUser, us);
             updateProfile1.update(currentUser, us);
 
 

@@ -49,7 +49,7 @@ namespace proyectoFinal.Controls
                 {
                     MessageBox.Show("Login successful");
                     User u = us.getUser(username);
-                    var txt=u.pPicturePath;
+                    
                     owner.setuser(u);
                 }
 

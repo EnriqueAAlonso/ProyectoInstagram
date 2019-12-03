@@ -20,7 +20,7 @@ namespace proyectoFinal.Controls
         public UpdateProfile()
         {
             InitializeComponent();
-            openFileDialog1.Filter = "JPG (.jpg)|*.jpg";
+            openFileDialog1.Filter = "JPG (.jpg)|*.jpg|BMP (.bmp)|*.bmp|PNG (.png)|*.png";
         }
        
         public void update(User u, UserService us)
@@ -31,10 +31,8 @@ namespace proyectoFinal.Controls
             label4.Text = user.email;
             if (user.pPicturePath != null)
             {
-
-                img = Image.FromFile(user.pPicturePath);
                 
-                pictureBox1.Image = new Bitmap(img);
+                pictureBox1.Image = Image.FromFile(user.pPicturePath);
             }
 
             textBox1.Text = user.bio;
@@ -46,11 +44,11 @@ namespace proyectoFinal.Controls
         private void button1_Click(object sender, EventArgs e)
         {
             
-            user.setImg(new Bitmap(pictureBox1.Image));
+            
+            
             user.bio = textBox1.Text;
-            usService.updatePicture(user);
+            
             usService.updateDesc(user);
-            pictureBox1.Image = user.profilePicture;
         }
 
         private int imgType = 0;
@@ -63,16 +61,27 @@ namespace proyectoFinal.Controls
                 string file = openFileDialog1.FileName;
                 try
                 {
-                    img = Image.FromFile(file);
-                    if (file.Substring(file.Length - 3) == "jpg") imgType = 1;
-                    else if ((file.Substring(file.Length - 3) == "bmp")) imgType = 2;
-                    else imgType = 3;
-                    pictureBox1.Image = img;
+                    pictureBox1.Image.Dispose();
+                    pictureBox1.Image = null;
+                   
+                   
+                    pictureBox1.Image = Image.FromFile(file);
                 }
                 catch (IOException)
                 {
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            user.setImg(pictureBox1.Image);
+            usService.updatePicture(user);
+
+            pictureBox1.Image.Dispose();
+            pictureBox1.Image = null;
+
+            pictureBox1.Image = Image.FromFile(user.pPicturePath);
         }
     }
     
