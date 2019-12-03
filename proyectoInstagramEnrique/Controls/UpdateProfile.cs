@@ -29,7 +29,7 @@ namespace proyectoFinal.Controls
             usService = us;
             label3.Text = user.username;
             label4.Text = user.email;
-            if (user.pPicturePath != "")
+            if (user.pPicturePath != ""&& user.pPicturePath!=null)
             {
                 
                 pictureBox1.Image = Image.FromFile(user.pPicturePath);

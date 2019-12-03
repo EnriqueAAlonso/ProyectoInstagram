@@ -13,6 +13,7 @@ namespace proyectoFinal.Controls
     public partial class UserSearch : UserControl
     {
         private User currentUser;
+        private bool follower = false;
         private UserService userService;
         private ProfileIterator pI;
         private List<string> posts=new List<string>();
@@ -26,7 +27,7 @@ namespace proyectoFinal.Controls
             viewPublication2.Hide();
             button2.Hide();
             button3.Hide();
-
+            button4.Hide();
 
         }
         public void logOut()
@@ -39,7 +40,7 @@ namespace proyectoFinal.Controls
             textBox1.Text = "";
             currentUser = null;
             searcheduser = null;
-
+            button4.Hide();
             posts = new List<string>();
             pI=new ProfileIterator(posts,2);
             pI.getProfiles();
@@ -52,6 +53,7 @@ namespace proyectoFinal.Controls
             searcheduser = null;
             posts=new List<string>();
             profileView1.Hide();
+            button4.Hide();
             
             
 
@@ -65,8 +67,25 @@ namespace proyectoFinal.Controls
                 searcheduser = userService.getUser(textBox1.Text);
                 if (searcheduser != null)
                 {
+                    button4.Show();
                     profileView1.Show();
                     searcheduser.Clone(userService.getPosts(searcheduser), userService.getFollowers(searcheduser), userService.getFollowing(searcheduser));
+                    if (searcheduser.followers.Contains(currentUser.username))
+                    {
+                        follower = true;
+                        button4.Text = "unfollow";
+                    }
+
+
+
+                    else
+                    {
+                        follower = false;
+                        button4.Text = "follow";
+
+                    }
+
+                    
                     pI = new ProfileIterator(searcheduser.publication, 2);
                     pI.resetIterator();
                     posts = new List<string>();
@@ -111,6 +130,29 @@ namespace proyectoFinal.Controls
             pI.navigateBack();
             posts = pI.getProfiles();
             getPosts();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            if (follower)
+            {
+                userService.unFollow(currentUser.username,searcheduser.username);
+                follower = false;
+                button4.Text = "Follow";
+                searcheduser.Clone(userService.getPosts(searcheduser), userService.getFollowers(searcheduser), userService.getFollowing(searcheduser));
+                currentUser.Clone(userService.getPosts(currentUser), userService.getFollowers(currentUser), userService.getFollowing(currentUser));
+                profileView1.sendUser(searcheduser);
+            }
+            else
+            {
+                userService.follow(currentUser.username, searcheduser.username);
+                follower = true;
+                button4.Text = "unfollow";
+                searcheduser.Clone(userService.getPosts(searcheduser), userService.getFollowers(searcheduser), userService.getFollowing(searcheduser));
+                currentUser.Clone(userService.getPosts(currentUser), userService.getFollowers(currentUser), userService.getFollowing(currentUser));
+                profileView1.sendUser(searcheduser);
+            }
         }
     }
 }

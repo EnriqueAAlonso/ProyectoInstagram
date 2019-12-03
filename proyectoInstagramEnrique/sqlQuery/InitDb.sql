@@ -1,12 +1,14 @@
-﻿create database fakeInstagram
+﻿create database fakeInstagram2
 go
-use fakeInstagram
+use fakeInstagram2
 go
 
 create table users(
 username nvarchar(100) not null,
 email nvarchar(100) not null,
-pwd nvarchar(100));
+pwd nvarchar(100),
+pPath nvarchar(MAX),
+descript nvarchar(MAX));
 go
 
 
@@ -27,7 +29,7 @@ begin try
 	set @haserror = 0;
 	insert into users
 	values
-	(@username,@email,@pwd)
+	(@username,@email,@pwd,NULL,NULL)
 end try
 begin catch
 	set @haserror = 1;
@@ -143,9 +145,7 @@ as
 
 select * from publications where @profile=profile order by date desc
 
-go
-alter table users
-add pPath nvarchar(MAX) 
+
 
 go
 create procedure updatePicture
@@ -158,9 +158,7 @@ as
 
 UPDATE users set pPath=@pPath where username=@profile
 go
-alter table users
-add descript nvarchar(MAX) 
-go
+
 create procedure updateDesc
 (
 	
@@ -231,3 +229,59 @@ create procedure getPub
 as
 
 select * from publications where @id=ID order by date desc
+go
+create TABLE likes
+(
+	ID nvarchar(MAX),
+	username nvarchar(MAX),
+	date datetime
+)
+go
+create procedure getLike
+(
+	
+	@id nvarchar(MAX),
+	@username nvarchar(max)
+	
+)
+as
+select * from likes where @id=ID and @username=username order by date desc
+go
+create procedure deleteLike
+(
+	
+	@id nvarchar(MAX),
+	@username nvarchar(max)
+	
+)
+as
+delete from likes where @id=ID and @username=username 
+go
+create procedure createLike
+(
+	@ID nvarchar(MAX),
+	@profile nvarchar(MAX),
+	@date datetime,
+	
+	@haserror bit out
+)
+as
+begin try
+	set @haserror = 0;
+	insert into likes
+	values
+	(@ID,@profile,@date)
+end try
+begin catch
+	set @haserror = 1;
+end catch
+go
+create procedure getAllTheLikes
+(
+	
+	@id nvarchar(MAX)
+	
+)
+as
+ Select * from likes where @id=ID  order by date desc
+go

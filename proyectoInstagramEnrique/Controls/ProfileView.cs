@@ -27,7 +27,7 @@ namespace proyectoFinal.Controls
             label4.Text = user.followers.Count.ToString();
             label5.Text = user.following.Count.ToString();
             textBox1.Text = user.bio;
-            if (user.pPicturePath != "") pictureBox1.Image = Image.FromFile(user.pPicturePath);
+            if (user.pPicturePath != ""&& user.pPicturePath !=null) pictureBox1.Image = Image.FromFile(user.pPicturePath);
             else pictureBox1.Image = null;
         }
 

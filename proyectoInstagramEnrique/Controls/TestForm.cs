@@ -17,6 +17,7 @@ namespace proyectoFinal.Controls
         private User currentUser;
         private UserService us;
         private Form1 owner;
+        private Observer obs;
         public TestForm()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace proyectoFinal.Controls
             viewStory1.setOwner(this);
             view_Publications1.Hide();
             userSearch1.Hide();
+            obs = new Observer(this);
 
 
         }
@@ -93,18 +95,25 @@ namespace proyectoFinal.Controls
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            logout();
+            obs.notifyObserver(3);
+        }
+
+        public void logout()
+        {
             currentUser = null;
             owner.login();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            makePost();
+            obs.notifyObserver(2);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            userInterface();
+            
+            obs.notifyObserver(1);
 
         }
 
@@ -144,14 +153,15 @@ namespace proyectoFinal.Controls
         private void button4_Click(object sender, EventArgs e)
         {
 
-            updateProfile();
+           // updateProfile();
+            obs.notifyObserver(4);
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            viewStory();
-
+            //viewStory();
+            obs.notifyObserver(5);
 
         }
 
@@ -190,7 +200,7 @@ namespace proyectoFinal.Controls
 
         private void button6_Click(object sender, EventArgs e)
         {
-            viewPublication();
+           obs.notifyObserver(6);
 
         }
 
@@ -213,7 +223,7 @@ namespace proyectoFinal.Controls
 
         private void button7_Click(object sender, EventArgs e)
         {
-            startSearch();
+            obs.notifyObserver(7);
         }
 
         public void startSearch()
