@@ -1,4 +1,6 @@
-﻿namespace proyectoInstagramEnrique
+﻿using System.Drawing;
+
+namespace proyectoInstagramEnrique
 {
     partial class Form1
     {
@@ -28,9 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Drawing.Icon ic=new Icon("instagramLogo.ico");
             this.start1 = new proyectoFinal.Controls.start();
             this.testForm1 = new proyectoFinal.Controls.TestForm();
             this.SuspendLayout();
+            this.Icon = ic;
             // 
             // start1
             // 
