@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Adapter.cs" />
+    <Compile Include="Classes\PubBuilder.cs" />
     <Compile Include="Classes\Publication.cs" />
     <Compile Include="Classes\SQLClient.cs" />
+    <Compile Include="Classes\Story.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UserDS.cs" />
     <Compile Include="Classes\UserService.cs" />
@@ -88,6 +90,12 @@
     <Compile Include="Controls\UpdateProfile.Designer.cs">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\userPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\userPanel.Designer.cs">
+      <DependentUpon>userPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ViewPublication.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UpdateProfile.resx">
       <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\userPanel.resx">
+      <DependentUpon>userPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ViewPublication.resx">
       <DependentUpon>ViewPublication.cs</DependentUpon>

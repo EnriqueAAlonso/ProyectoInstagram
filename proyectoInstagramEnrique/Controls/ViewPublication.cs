@@ -25,7 +25,7 @@ namespace proyectoFinal.Controls
             thisPub = pub;
             thisUS = uS;
             user = u;
-            this.pictureBox1.Image = pub.image;
+            this.pictureBox1.Image = Image.FromFile(pub.imgPath);
             this.label1.Text = thisUS.getLikes(pub.id).ToString()+" likes";
             if (thisUS.liked(pub.id, user)) label2.ForeColor = Color.Pink;
             else label2.ForeColor = Color.Black;

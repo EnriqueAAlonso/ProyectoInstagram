@@ -73,6 +73,14 @@ namespace proyectoFinal.Controls
             }
         }
 
+        public void clear()
+        {
+            this.textBox1.Text = "";
+            this.pictureBox1.Image = null;
+            this.user = null;
+            this.usService = null;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             user.setImg(pictureBox1.Image);
@@ -82,6 +90,12 @@ namespace proyectoFinal.Controls
             pictureBox1.Image = null;
 
             pictureBox1.Image = Image.FromFile(user.pPicturePath);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.clear();
+            this.Hide();
         }
     }
     

@@ -39,21 +39,11 @@ namespace proyectoFinal.Controls
             
             currentUser = u;
             u.updatePublications(us);
+            currentUser.Clone(new List<string>(), us.getFollowers(u), us.getFollowing(currentUser));
             
-            currentUser.following =new List<string>();
-            var following=us.getFollowing(currentUser);
-            foreach (var person in following)
-            {
-                currentUser.following.Add(person);
-            }
 
             comboBox1.DataSource = currentUser.following;
-            var followers= us.getFollowers(u);
-            currentUser.followers=new List<string>();
-            foreach (var person in followers)
-            {
-                currentUser.followers.Add(person);
-            }
+            
             foreach (var f in currentUser.followers)
             {
                 textBox1.AppendText(f+Environment.NewLine);
@@ -62,6 +52,13 @@ namespace proyectoFinal.Controls
             updateProfile1.update(currentUser, us);
 
 
+        }
+
+        public void clear()
+        {
+            currentUser = null;
+            textBox1.Text = "";
+            comboBox1.DataSource = null;
         }
 
         private void button2_Click(object sender, EventArgs e)

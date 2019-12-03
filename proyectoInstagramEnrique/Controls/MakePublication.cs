@@ -30,6 +30,14 @@ namespace proyectoFinal.Controls
 
         }
 
+        public void clear()
+        {
+            textBox1.Text = "";
+            pictureBox1.Image = null;
+            user = null;
+            usServ = null;
+        }
+
         private Image img;
         private string desc;
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +64,8 @@ namespace proyectoFinal.Controls
             Publication pub=new Publication();
             pub.createPublication(desc,img,user);
             user.Publish(pub,usServ);
+            this.clear();
+            this.Hide();
         }
     }
 }
