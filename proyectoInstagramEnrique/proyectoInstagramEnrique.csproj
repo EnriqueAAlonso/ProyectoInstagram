@@ -109,6 +109,12 @@
     <Compile Include="Controls\userPanel.Designer.cs">
       <DependentUpon>userPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UserSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UserSearch.Designer.cs">
+      <DependentUpon>UserSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\View_Publications.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\userPanel.resx">
       <DependentUpon>userPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UserSearch.resx">
+      <DependentUpon>UserSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\View_Publications.resx">
       <DependentUpon>View_Publications.cs</DependentUpon>

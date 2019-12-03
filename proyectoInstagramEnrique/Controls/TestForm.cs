@@ -26,6 +26,7 @@ namespace proyectoFinal.Controls
             makePublication1.setOwner(this);
             viewStory1.setOwner(this);
             view_Publications1.Hide();
+            userSearch1.Hide();
 
 
         }
@@ -55,7 +56,8 @@ namespace proyectoFinal.Controls
             profileView1.sendUser(currentUser);
             view_Publications1.update(currentUser,us);
             view_Publications1.Width = 1300;
-
+            userSearch1.Hide();
+            userSearch1.logOut();
 
 
         }
@@ -117,6 +119,10 @@ namespace proyectoFinal.Controls
             updateProfile1.Hide();
             updateProfile1.clear();
             viewStory1.Hide();
+            view_Publications1.Hide();
+            userSearch1.Hide();
+
+            userSearch1.logOut();
         }
 
         public void makePost()
@@ -130,6 +136,9 @@ namespace proyectoFinal.Controls
             updateProfile1.clear();
             viewStory1.Hide();
             view_Publications1.Hide();
+            userSearch1.Hide();
+
+            userSearch1.logOut();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -157,6 +166,9 @@ namespace proyectoFinal.Controls
             owner.UpdateProfile();
             viewStory1.Hide();
             view_Publications1.Hide();
+            userSearch1.Hide();
+
+            userSearch1.logOut();
         }
 
         public void viewStory()
@@ -171,12 +183,21 @@ namespace proyectoFinal.Controls
             owner.UserInt();
             viewStory1.run();
             view_Publications1.Hide();
+            userSearch1.Hide();
+
+            userSearch1.logOut();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            viewPublication();
+
+        }
+
+        public void viewPublication()
+        {
             owner.viewPublications();
-            view_Publications1.update(currentUser,us);
+            view_Publications1.update(currentUser, us);
             view_Publications1.Show();
             profileView1.clear();
             profileView1.Hide();
@@ -185,7 +206,29 @@ namespace proyectoFinal.Controls
             updateProfile1.Hide();
             updateProfile1.clear();
             viewStory1.Hide();
+            userSearch1.Hide();
 
+            userSearch1.logOut();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            startSearch();
+        }
+
+        public void startSearch()
+        {
+            owner.viewPublications();
+            userSearch1.update(currentUser, us);
+            view_Publications1.Hide();
+            profileView1.clear();
+            profileView1.Hide();
+            makePublication1.clear();
+            makePublication1.Hide();
+            updateProfile1.Hide();
+            updateProfile1.clear();
+            viewStory1.Hide();
+            userSearch1.Show();
         }
     }
 }

@@ -18,10 +18,12 @@ namespace proyectoFinal.Controls
         }
 
         private User user;
+        private User viewer;
         private UserService thisUS;
         private Publication thisPub;
-        public void UpdateView(Publication pub, UserService uS, User u)
+        public void UpdateView(Publication pub, UserService uS, User u, User view)
         {
+            viewer = view;
             thisPub = pub;
             thisUS = uS;
             user = u;
@@ -30,6 +32,9 @@ namespace proyectoFinal.Controls
             if (thisUS.liked(pub.id, user)) label2.ForeColor = Color.Pink;
             else label2.ForeColor = Color.Black;
             textBox1.Text = pub.description;
+
+            if (viewer.username == user.username) label2.Hide();
+            else label2.Show();
         }
     }
 }

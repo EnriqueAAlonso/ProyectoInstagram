@@ -25,7 +25,7 @@ namespace proyectoFinal.Controls
         {
             currentUser = u;
             userService = us;
-            pI = new ProfileIterator(u.publication);
+            pI = new ProfileIterator(u.publication,3);
             pI.resetIterator();
             posts=new List<string>();
             posts = pI.getProfiles();
@@ -44,17 +44,17 @@ namespace proyectoFinal.Controls
             else button1.Hide();
             if (posts.Count > 0)
             {
-                viewPublication1.UpdateView(userService.getPost(posts[0]),userService,currentUser);
+                viewPublication1.UpdateView(userService.getPost(posts[0]),userService,currentUser, currentUser);
                 viewPublication1.Show();
             }
             if (posts.Count > 1)
             {
-                viewPublication2.UpdateView(userService.getPost(posts[1]), userService, currentUser);
+                viewPublication2.UpdateView(userService.getPost(posts[1]), userService, currentUser, currentUser);
                 viewPublication2.Show();
             }
             if (posts.Count > 2)
             {
-                viewPublication3.UpdateView(userService.getPost(posts[2]), userService, currentUser);
+                viewPublication3.UpdateView(userService.getPost(posts[2]), userService, currentUser,currentUser);
                 viewPublication3.Show();
             }
         }

@@ -29,7 +29,7 @@ namespace proyectoFinal.Controls
             usService = us;
             label3.Text = user.username;
             label4.Text = user.email;
-            if (user.pPicturePath != null)
+            if (user.pPicturePath != "")
             {
                 
                 pictureBox1.Image = Image.FromFile(user.pPicturePath);
@@ -61,7 +61,7 @@ namespace proyectoFinal.Controls
                 string file = openFileDialog1.FileName;
                 try
                 {
-                    pictureBox1.Image.Dispose();
+                    if(pictureBox1.Image!=null)pictureBox1.Image.Dispose();
                     pictureBox1.Image = null;
                    
                    

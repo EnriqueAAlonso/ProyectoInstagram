@@ -225,9 +225,9 @@ go
 create procedure getPub
 (
 	
-	@id nvarchar(MAX),
-	@haserror bit out
+	@id nvarchar(MAX)
+	
 )
 as
 
-select 1 from publications where @id=ID order by date desc
+select * from publications where @id=ID order by date desc

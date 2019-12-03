@@ -39,6 +39,8 @@
             this.updateProfile1 = new proyectoFinal.Controls.UpdateProfile();
             this.makePublication1 = new proyectoFinal.Controls.MakePublication();
             this.profileView1 = new proyectoFinal.Controls.ProfileView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.userSearch1 = new proyectoFinal.Controls.UserSearch();
             this.SuspendLayout();
             // 
             // button1
@@ -155,10 +157,32 @@
             this.profileView1.Size = new System.Drawing.Size(402, 625);
             this.profileView1.TabIndex = 11;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button7.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(12, 573);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(120, 90);
+            this.button7.TabIndex = 19;
+            this.button7.Text = "Search user";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // userSearch1
+            // 
+            this.userSearch1.Location = new System.Drawing.Point(146, 7);
+            this.userSearch1.Name = "userSearch1";
+            this.userSearch1.Size = new System.Drawing.Size(1196, 675);
+            this.userSearch1.TabIndex = 20;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.userSearch1);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.view_Publications1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.viewStory1);
@@ -188,5 +212,7 @@
         private ViewStory viewStory1;
         private System.Windows.Forms.Button button6;
         private View_Publications view_Publications1;
+        private System.Windows.Forms.Button button7;
+        private UserSearch userSearch1;
     }
 }

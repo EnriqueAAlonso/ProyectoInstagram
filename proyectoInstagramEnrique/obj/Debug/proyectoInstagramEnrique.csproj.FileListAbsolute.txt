@@ -19,3 +19,4 @@ C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.ProfileView.resources
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.ViewStory.resources
 C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.View_Publications.resources
+C:\Users\henry\Documents\Patrones de Dis\InstagramClone\proyectoInstagramEnrique\proyectoInstagramEnrique\obj\Debug\proyectoFinal.Controls.UserSearch.resources
