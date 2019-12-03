@@ -25,8 +25,9 @@ namespace proyectoFinal.Controls
             profileView1.Show();
             makePublication1.setOwner(this);
             viewStory1.setOwner(this);
-            
-            
+            view_Publications1.Hide();
+
+
         }
 
         public void setOwner(Form1 o)
@@ -44,7 +45,7 @@ namespace proyectoFinal.Controls
         {
             
             currentUser = u;
-            u.updatePublications(us);
+            currentUser.updatePublications(us);
             currentUser.Clone(us.getPosts(currentUser), us.getFollowers(currentUser), us.getFollowing(currentUser));
             makePublication1.update(currentUser, us);
             updateProfile1.update(currentUser, us);
@@ -52,7 +53,9 @@ namespace proyectoFinal.Controls
             viewStory1.updateUser(currentUser,us);
             profileView1.Show();
             profileView1.sendUser(currentUser);
-            
+            view_Publications1.update(currentUser,us);
+            view_Publications1.Width = 1300;
+
 
 
         }
@@ -126,6 +129,7 @@ namespace proyectoFinal.Controls
             updateProfile1.Hide();
             updateProfile1.clear();
             viewStory1.Hide();
+            view_Publications1.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -137,14 +141,7 @@ namespace proyectoFinal.Controls
 
         private void button5_Click(object sender, EventArgs e)
         {
-            profileView1.clear();
-            profileView1.Hide();
-            makePublication1.clear();
-            makePublication1.Hide();
-            updateProfile1.Hide();
-            updateProfile1.clear();
-            viewStory1.Show();
-            viewStory1.run();
+            viewStory();
 
 
         }
@@ -159,6 +156,36 @@ namespace proyectoFinal.Controls
             updateProfile1.update(currentUser, us);
             owner.UpdateProfile();
             viewStory1.Hide();
+            view_Publications1.Hide();
+        }
+
+        public void viewStory()
+        {
+            profileView1.clear();
+            profileView1.Hide();
+            makePublication1.clear();
+            makePublication1.Hide();
+            updateProfile1.Hide();
+            updateProfile1.clear();
+            viewStory1.Show();
+            owner.UserInt();
+            viewStory1.run();
+            view_Publications1.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            owner.viewPublications();
+            view_Publications1.update(currentUser,us);
+            view_Publications1.Show();
+            profileView1.clear();
+            profileView1.Hide();
+            makePublication1.clear();
+            makePublication1.Hide();
+            updateProfile1.Hide();
+            updateProfile1.clear();
+            viewStory1.Hide();
+
         }
     }
 }

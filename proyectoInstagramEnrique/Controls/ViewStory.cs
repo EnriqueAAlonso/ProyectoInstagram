@@ -40,7 +40,7 @@ namespace proyectoFinal.Controls
         {
             us.deleteStory();
             List<string> stories = us.getStories(currentUser);
-            if(iter<stories.Count||iter<0) pictureBox1.Image = Image.FromFile(stories[iter]);
+            if(iter<stories.Count&&iter>=0) pictureBox1.Image = Image.FromFile(stories[iter]);
             else
             {
                 iter = 0;

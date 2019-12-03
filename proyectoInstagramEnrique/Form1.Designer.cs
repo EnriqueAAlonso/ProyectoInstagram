@@ -38,7 +38,7 @@ namespace proyectoInstagramEnrique
             // 
             this.testForm1.Location = new System.Drawing.Point(12, -3);
             this.testForm1.Name = "testForm1";
-            this.testForm1.Size = new System.Drawing.Size(963, 775);
+            this.testForm1.Size = new System.Drawing.Size(1342, 775);
             this.testForm1.TabIndex = 1;
             // 
             // start1

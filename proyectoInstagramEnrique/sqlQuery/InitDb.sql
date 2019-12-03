@@ -222,3 +222,12 @@ select * from Story where @profile=profile order by date desc
 
 go
 
+create procedure getPub
+(
+	
+	@id nvarchar(MAX),
+	@haserror bit out
+)
+as
+
+select 1 from publications where @id=ID order by date desc

@@ -72,5 +72,11 @@ namespace proyectoInstagramEnrique
             this.Height = 750;
             this.Width = 800;
         }
+
+        public void viewPublications()
+        {
+            this.Height = 900;
+            this.Width = 1500;
+        }
     }
 }

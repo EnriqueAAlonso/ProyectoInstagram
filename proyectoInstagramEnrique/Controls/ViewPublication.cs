@@ -29,6 +29,7 @@ namespace proyectoFinal.Controls
             this.label1.Text = thisUS.getLikes(pub.id).ToString()+" likes";
             if (thisUS.liked(pub.id, user)) label2.ForeColor = Color.Pink;
             else label2.ForeColor = Color.Black;
+            textBox1.Text = pub.description;
         }
     }
 }
