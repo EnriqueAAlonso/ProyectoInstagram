@@ -28,22 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.updateProfile1 = new proyectoFinal.Controls.UpdateProfile();
             this.makePublication1 = new proyectoFinal.Controls.MakePublication();
             this.profileView1 = new proyectoFinal.Controls.ProfileView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mistral", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 38);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
             // 
             // button1
             // 
@@ -54,13 +46,13 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 63);
             this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
+            this.button1.Text = "Log Out";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // updateProfile1
             // 
-            this.updateProfile1.Location = new System.Drawing.Point(138, 31);
+            this.updateProfile1.Location = new System.Drawing.Point(138, 60);
             this.updateProfile1.Name = "updateProfile1";
             this.updateProfile1.Size = new System.Drawing.Size(579, 550);
             this.updateProfile1.TabIndex = 8;
@@ -68,39 +60,81 @@
             // 
             // makePublication1
             // 
-            this.makePublication1.Location = new System.Drawing.Point(138, 15);
+            this.makePublication1.Location = new System.Drawing.Point(129, 70);
             this.makePublication1.Name = "makePublication1";
             this.makePublication1.Size = new System.Drawing.Size(570, 566);
             this.makePublication1.TabIndex = 7;
             // 
             // profileView1
             // 
-            this.profileView1.Location = new System.Drawing.Point(138, 65);
+            this.profileView1.Location = new System.Drawing.Point(138, 70);
             this.profileView1.Name = "profileView1";
             this.profileView1.Size = new System.Drawing.Size(402, 625);
             this.profileView1.TabIndex = 11;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(12, 155);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 90);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Make Publication";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button3.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(12, 271);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 90);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Check Profile";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button4.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button4.Location = new System.Drawing.Point(12, 381);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 90);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Edit Profile";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.profileView1);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.updateProfile1);
             this.Controls.Add(this.makePublication1);
+            this.Controls.Add(this.profileView1);
             this.Name = "TestForm";
-            this.Size = new System.Drawing.Size(618, 693);
+            this.Size = new System.Drawing.Size(678, 854);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private MakePublication makePublication1;
         private UpdateProfile updateProfile1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private ProfileView profileView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

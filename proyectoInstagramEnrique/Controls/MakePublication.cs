@@ -15,6 +15,8 @@ namespace proyectoFinal.Controls
     {
         private User user;
         private UserService usServ;
+        private TestForm owner;
+        private PubBuilder pub;
         public MakePublication()
         {
             InitializeComponent();
@@ -28,6 +30,11 @@ namespace proyectoFinal.Controls
             user = us;
             usServ = userS;
 
+        }
+
+        public void setOwner(TestForm t)
+        {
+            owner = t;
         }
 
         public void clear()
@@ -61,11 +68,22 @@ namespace proyectoFinal.Controls
         private void button2_Click(object sender, EventArgs e)
         {
             desc = textBox1.Text;
-            Publication pub=new Publication();
+            pub=new Publication();
             pub.createPublication(desc,img,user);
-            user.Publish(pub,usServ);
+            user.Publish((Publication)pub,usServ);
             this.clear();
             this.Hide();
+            owner.userInterface();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pub=new Story();
+            pub.createPublication(desc, img, user);
+            user.PublishStory((Story)pub, usServ);
+            this.clear();
+            owner.userInterface();
+
         }
     }
 }

@@ -58,5 +58,19 @@ namespace proyectoInstagramEnrique
             this.UserInt();
             
         }
+
+        public void UpdateProfile()
+        {
+            this.Height = 750;
+            this.Width = 900;
+            start1.Hide();
+            testForm1.Show();
+        }
+
+        public void MakePublication()
+        {
+            this.Height = 750;
+            this.Width = 800;
+        }
     }
 }
