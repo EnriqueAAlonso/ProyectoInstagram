@@ -73,6 +73,12 @@
     <Compile Include="Controls\MakePublication.Designer.cs">
       <DependentUpon>MakePublication.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ProfileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProfileView.Designer.cs">
+      <DependentUpon>ProfileView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Register.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\MakePublication.resx">
       <DependentUpon>MakePublication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProfileView.resx">
+      <DependentUpon>ProfileView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>

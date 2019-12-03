@@ -21,6 +21,9 @@ namespace proyectoFinal.Controls
         {
             InitializeComponent();
             makePublication1.Hide();
+            updateProfile1.Hide();
+            profileView1.Show();
+            
         }
 
         public void setOwner(Form1 o)
@@ -39,17 +42,14 @@ namespace proyectoFinal.Controls
             
             currentUser = u;
             u.updatePublications(us);
-            currentUser.Clone(new List<string>(), us.getFollowers(u), us.getFollowing(currentUser));
-            
-
-            comboBox1.DataSource = currentUser.following;
-            
-            foreach (var f in currentUser.followers)
-            {
-                textBox1.AppendText(f+Environment.NewLine);
-            }
+            currentUser.Clone(us.getPosts(currentUser), us.getFollowers(currentUser), us.getFollowing(currentUser));
             makePublication1.update(currentUser, us);
             updateProfile1.update(currentUser, us);
+            label1.Text = "Welcome " + currentUser.username;
+            label1.Show();
+            profileView1.Show();
+            profileView1.sendUser(currentUser);
+            
 
 
         }
@@ -57,36 +57,21 @@ namespace proyectoFinal.Controls
         public void clear()
         {
             currentUser = null;
-            textBox1.Text = "";
-            comboBox1.DataSource = null;
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var val = comboBox1.Text;
-            if (val != null)
-            {
-                us.unFollow(currentUser.username,val);
-                update(currentUser);
-            }
+           
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var val = textBox2.Text;
-            if (val != null)
-            {
-                if (us.follow(currentUser.username, textBox2.Text))
-                {
-                    MessageBox.Show("Follow Successful");
-                    update(currentUser);
-                }
-                else
-                {
-                    MessageBox.Show("follow unsuccessful");
-                }
-            }
+            
+            
         }
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -96,6 +81,12 @@ namespace proyectoFinal.Controls
         private void updateProfile1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            currentUser = null;
+            owner.login();
         }
     }
 }

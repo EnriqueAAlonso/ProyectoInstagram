@@ -49,7 +49,8 @@ namespace proyectoFinal.Controls
                 {
                     MessageBox.Show("Login successful");
                     User u = us.getUser(username);
-                    
+                    textBox1.Text = "";
+                    textBox2.Text = "";
                     owner.setuser(u);
                 }
 

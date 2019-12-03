@@ -58,7 +58,10 @@ namespace proyectoFinal.Controls
                 if (text == "User registered correctly")
                 {
                     owner.setuser(u);
+                    textBox1.Text = "";
+                    textBox2.Text = "";
                     
+
                 }
 
 

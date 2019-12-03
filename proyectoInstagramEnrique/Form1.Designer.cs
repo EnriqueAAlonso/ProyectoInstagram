@@ -30,35 +30,33 @@ namespace proyectoInstagramEnrique
         /// </summary>
         private void InitializeComponent()
         {
-            System.Drawing.Icon ic=new Icon("instagramLogo.ico");
-            this.start1 = new proyectoFinal.Controls.start();
             this.testForm1 = new proyectoFinal.Controls.TestForm();
+            this.start1 = new proyectoFinal.Controls.start();
             this.SuspendLayout();
-            this.Icon = ic;
-            // 
-            // start1
-            // 
-            this.start1.Location = new System.Drawing.Point(18, 12);
-            this.start1.Name = "start1";
-            this.start1.Size = new System.Drawing.Size(1077, 425);
-            this.start1.TabIndex = 0;
             // 
             // testForm1
             // 
             this.testForm1.Location = new System.Drawing.Point(12, -3);
             this.testForm1.Name = "testForm1";
-            this.testForm1.Size = new System.Drawing.Size(963, 550);
+            this.testForm1.Size = new System.Drawing.Size(963, 775);
             this.testForm1.TabIndex = 1;
+            // 
+            // start1
+            // 
+            this.start1.Location = new System.Drawing.Point(4, 12);
+            this.start1.Name = "start1";
+            this.start1.Size = new System.Drawing.Size(1077, 425);
+            this.start1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 559);
+            this.ClientSize = new System.Drawing.Size(1093, 880);
             this.Controls.Add(this.testForm1);
             this.Controls.Add(this.start1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Instagram";
             this.ResumeLayout(false);
 
         }
