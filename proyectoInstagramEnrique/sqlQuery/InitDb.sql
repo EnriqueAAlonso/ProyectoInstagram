@@ -170,3 +170,55 @@ create procedure updateDesc
 as
 
 UPDATE users set descript=@desc where username=@profile
+go
+create TABLE Story
+(
+	ID nvarchar(MAX),
+	profile nvarchar(MAX),
+	imgPath nvarchar(MAX),
+	date datetime
+)
+go
+create procedure createStory
+(
+	@ID nvarchar(MAX),
+	@profile nvarchar(MAX),
+	@date datetime,
+	@imgPath nvarchar(MAX),
+	
+	@haserror bit out
+)
+as
+begin try
+	set @haserror = 0;
+	insert into Story
+	values
+	(@ID,@profile,@imgPath,@date)
+end try
+begin catch
+	set @haserror = 1;
+end catch
+go
+create procedure DeleteStory
+(
+	
+	@date datetime
+	
+	
+)
+as
+DELETE FROM Story WHERE DATEDIFF(hour, date, @date)>24
+
+go
+create procedure getStories
+(
+	
+	@profile nvarchar(MAX)
+	
+)
+as
+
+select * from Story where @profile=profile order by date desc
+
+go
+
