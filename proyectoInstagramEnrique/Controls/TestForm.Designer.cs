@@ -35,6 +35,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.viewStory1 = new proyectoFinal.Controls.ViewStory();
             this.SuspendLayout();
             // 
             // button1
@@ -111,10 +113,32 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button5.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button5.Location = new System.Drawing.Point(12, 477);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(120, 90);
+            this.button5.TabIndex = 15;
+            this.button5.Text = "View Own Story";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // viewStory1
+            // 
+            this.viewStory1.Location = new System.Drawing.Point(164, 75);
+            this.viewStory1.Name = "viewStory1";
+            this.viewStory1.Size = new System.Drawing.Size(376, 464);
+            this.viewStory1.TabIndex = 16;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.viewStory1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -136,5 +160,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private ViewStory viewStory1;
     }
 }

@@ -24,6 +24,7 @@ namespace proyectoFinal.Controls
             updateProfile1.Hide();
             profileView1.Show();
             makePublication1.setOwner(this);
+            viewStory1.setOwner(this);
             
             
         }
@@ -47,7 +48,8 @@ namespace proyectoFinal.Controls
             currentUser.Clone(us.getPosts(currentUser), us.getFollowers(currentUser), us.getFollowing(currentUser));
             makePublication1.update(currentUser, us);
             updateProfile1.update(currentUser, us);
-            
+            viewStory1.Hide();
+            viewStory1.updateUser(currentUser,us);
             profileView1.Show();
             profileView1.sendUser(currentUser);
             
@@ -111,6 +113,7 @@ namespace proyectoFinal.Controls
             owner.UserInt();
             updateProfile1.Hide();
             updateProfile1.clear();
+            viewStory1.Hide();
         }
 
         public void makePost()
@@ -122,19 +125,40 @@ namespace proyectoFinal.Controls
             owner.MakePublication();
             updateProfile1.Hide();
             updateProfile1.clear();
+            viewStory1.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+            updateProfile();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            profileView1.clear();
+            profileView1.Hide();
+            makePublication1.clear();
+            makePublication1.Hide();
+            updateProfile1.Hide();
+            updateProfile1.clear();
+            viewStory1.Show();
+            viewStory1.run();
+
+
+        }
+
+        public void updateProfile()
         {
             profileView1.clear();
             profileView1.Hide();
             makePublication1.clear();
             makePublication1.Hide();
             updateProfile1.Show();
-            updateProfile1.update(currentUser,us);
+            updateProfile1.update(currentUser, us);
             owner.UpdateProfile();
-            
-
+            viewStory1.Hide();
         }
     }
 }
