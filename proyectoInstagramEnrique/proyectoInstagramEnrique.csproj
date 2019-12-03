@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Adapter.cs" />
+    <Compile Include="Classes\ProfileIterator.cs" />
     <Compile Include="Classes\PubBuilder.cs" />
     <Compile Include="Classes\Publication.cs" />
     <Compile Include="Classes\SQLClient.cs" />

@@ -33,9 +33,16 @@ namespace proyectoFinal.Controls
 
         }
 
+       
+
         public User getUser()
         {
             return us;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
