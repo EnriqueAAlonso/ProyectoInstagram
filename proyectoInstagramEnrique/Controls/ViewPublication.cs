@@ -30,6 +30,7 @@ namespace proyectoFinal.Controls
             user = u;
             this.pictureBox1.Image = Image.FromFile(pub.imgPath);
             this.label1.Text = thisUS.getLikes(pub).ToString()+" likes";
+            //label1.Hide();
             if (thisUS.liked(pub.id, viewer))
             {
                 label2.ForeColor = Color.Pink;
@@ -57,6 +58,7 @@ namespace proyectoFinal.Controls
                 label2.ForeColor = Color.Black;
                 liked = false;
                 this.label1.Text = thisUS.getLikes(thisPub).ToString() + " likes";
+                //label1.Hide();
             }
             else
             {
@@ -64,6 +66,8 @@ namespace proyectoFinal.Controls
                 liked = true;
                 thisUS.giveLike(viewer, thisPub);
                 this.label1.Text = thisUS.getLikes(thisPub).ToString() + " likes";
+                //label1.Hide();
+
             }
         }
     }

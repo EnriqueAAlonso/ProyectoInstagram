@@ -60,6 +60,7 @@ namespace proyectoFinal.Controls
             view_Publications1.Width = 1300;
             userSearch1.Hide();
             userSearch1.logOut();
+            
 
 
         }
