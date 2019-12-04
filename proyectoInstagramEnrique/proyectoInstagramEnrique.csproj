@@ -52,16 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Adapter.cs" />
-    <Compile Include="Classes\Observer.cs" />
-    <Compile Include="Classes\ProfileIterator.cs" />
-    <Compile Include="Classes\PubBuilder.cs" />
-    <Compile Include="Classes\Publication.cs" />
-    <Compile Include="Classes\SQLClient.cs" />
-    <Compile Include="Classes\Story.cs" />
-    <Compile Include="Classes\User.cs" />
-    <Compile Include="Classes\UserDS.cs" />
-    <Compile Include="Classes\UserService.cs" />
+    <Compile Include="Clases\Adapter.cs" />
+    <Compile Include="Clases\Observer.cs" />
+    <Compile Include="Clases\ProfileIterator.cs" />
+    <Compile Include="Clases\PubBuilder.cs" />
+    <Compile Include="Clases\Publication.cs" />
+    <Compile Include="Clases\SQLClient.cs" />
+    <Compile Include="Clases\Story.cs" />
+    <Compile Include="Clases\User.cs" />
+    <Compile Include="Clases\UserDS.cs" />
+    <Compile Include="Clases\UserService.cs" />
     <Compile Include="Controls\Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
