@@ -75,9 +75,7 @@ namespace proyectoFinal.Controls
                         follower = true;
                         button4.Text = "unfollow";
                     }
-
-
-
+                    
                     else
                     {
                         follower = false;
