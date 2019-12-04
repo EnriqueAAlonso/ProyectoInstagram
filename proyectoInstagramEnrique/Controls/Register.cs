@@ -60,7 +60,8 @@ namespace proyectoFinal.Controls
                     owner.setuser(u);
                     textBox1.Text = "";
                     textBox2.Text = "";
-                    
+                    textBox3.Text = "";
+
 
                 }
 
